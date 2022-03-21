@@ -1,0 +1,35 @@
+/* pages/login/index.wxss */
+
+.top {
+  margin: 20rpx 10rpx 10rpx 10rpx;
+  padding: 40rpx 20rpx 20rpx 20rpx;
+  background-color: #fff;
+}
+
+.top .input {
+  background-color: #eee;
+  border-radius: 24rpx;
+  overflow: hidden;
+  height: 80rpx;
+  padding-left: 16rpx;
+  margin-bottom: 40rpx;
+}
+
+.bottom {
+  margin: 30rpx 10rpx 10rpx 10rpx;
+}
+
+.bottom .btn {
+  width: 100%;
+  background-color: #409EFF;
+  border-radius: 16rpx;
+}
+
+.bottom .tip {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: #aaa;
+  font-size: 28rpx;
+  padding-top: 10rpx;
+}

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/login/index",
     "pages/home/index",
     "pages/mine/index"
   ],
@@ -20,6 +21,6 @@
       }
     ]
   },
-  "style": "v2",
+
   "sitemapLocation": "sitemap.json"
 }
