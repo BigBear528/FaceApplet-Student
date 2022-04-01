@@ -1,10 +1,9 @@
-<van-tabs bind:click="onClick">
+<van-tabs>
   <van-tab title="学生登录">
     <view class="top">
       <input placeholder="学号" class="input" bindinput="sidInput"></input>
       <input placeholder="密码" type="password" class="input" bindinput="spwdInput"></input>
     </view>
-
 
     <view class="bottom">
       <button class="btn" bindtap="sLogin">登录</button>

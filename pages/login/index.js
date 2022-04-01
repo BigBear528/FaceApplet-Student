@@ -1,3 +1,5 @@
+import dxRequest from "../../service/index"
+
 // pages/login/index.js
 Page({
   data: {
@@ -38,5 +40,23 @@ Page({
 
   sLogin() {
     console.log(this.data.sid, this.data.spwd)
+    const params = {
+      id: this.data.sid,
+      password: this.data.spwd
+    }
+
+    dxRequest.post('/student/login', params)
+      .then(res => {
+        // console.log(res)
+        if (res.code === '200') {
+          console.log("登录成功")
+          wx.setStorageSync("userInfo", JSON.stringify(res.data))
+        } else {
+          console.log(res.message)
+        }
+      })
+      .catch(err => {
+        console.log(err)
+      })
   }
 })
