@@ -11,7 +11,16 @@ Page({
 
 
   onLoad: function (options) {
-
+    // 判断时候有token,如果有token跳转到首页
+    let token = ''
+    if (wx.getStorageSync('userInfo').length > 0) {
+      token = JSON.parse(wx.getStorageSync('userInfo')).token;
+    }
+    if (token.length > 0) {
+      wx.reLaunch({
+        url: '/pages/home/index',
+      })
+    }
   },
 
   sidInput(e) {
@@ -51,6 +60,9 @@ Page({
         if (res.code === '200') {
           console.log("登录成功")
           wx.setStorageSync("userInfo", JSON.stringify(res.data))
+          wx.reLaunch({
+            url: '/pages/home/index',
+          })
         } else {
           console.log(res.message)
         }

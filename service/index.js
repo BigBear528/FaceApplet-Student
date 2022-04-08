@@ -15,7 +15,19 @@ class DXRequest {
 					token: token
 				},
 				success: function (res) {
-					resolve(res.data)
+					if (res.data.code === '401') {
+						wx.reLaunch({
+							url: '/pages/login/index',
+						})
+						wx.showToast({
+							title: '请重新登录', // 标题
+							icon: 'error',  // 图标类型，默认success
+							duration: 1500  // 提示窗停留时间，默认1500ms
+						})
+					} else {
+						resolve(res.data)
+					}
+
 				},
 				fail: function (err) {
 					reject(err)

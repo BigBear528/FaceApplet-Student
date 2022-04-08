@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/login/index",
     "pages/home/index",
+    "pages/login/index",
     "pages/mine/index"
   ],
   "window": {
@@ -11,7 +11,8 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/home/index",
         "text": "主页"
       },
@@ -21,6 +22,5 @@
       }
     ]
   },
-
   "sitemapLocation": "sitemap.json"
 }

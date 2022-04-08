@@ -1,20 +1,26 @@
-import { test } from "../../service/test"
+import dxRequest from "../../service/index"
+
 
 // pages/home/index.js
 Page({
 
- 
+
   data: {
 
   },
 
-  
+
   onLoad: function (options) {
-    test().then(res=>{
+    
+  },
+
+  test() {
+    console.log("点击触发")
+    dxRequest.get("/user/queryUserList").then(res => {
       console.log(res)
-    }).catch(err=>{
+    }).catch(err => {
       console.log(err)
     })
-  },
-  
+  }
+
 })

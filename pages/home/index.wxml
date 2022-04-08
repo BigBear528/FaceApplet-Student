@@ -1,2 +1,3 @@
 <!--pages/home/index.wxml-->
 <text>pages/home/index.wxml</text>
+<button bindtap="test">点击</button>
