@@ -1,2 +1,35 @@
-<!--pages/mine/index.wxml-->
-<text>pages/mine/index.wxml</text>
+<!-- 个人信息卡片 -->
+<view class="card">
+	<view class="head-portrait">
+		<image class="image" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+	</view>
+
+	<view class="head-info">
+		<view class="info-name">{{userInfo.name}}</view>
+	</view>
+</view>
+
+<view class="item" bindtap="changePassword">
+	<view class="title">
+		修改密码
+	</view>
+
+	<view class="icon">
+		<image class="icon" src="/assets/images/icons/arrow-right.png"></image>
+	</view>
+</view>
+
+
+<view class="item">
+	<view class="title">
+		修改人脸
+	</view>
+
+	<view class="icon">
+		<image class="icon" src="/assets/images/icons/arrow-right.png"></image>
+	</view>
+</view>
+
+
+<!-- 退出登录 -->
+<button bindtap="logout" class="logout">退出登录</button>

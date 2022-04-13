@@ -22,9 +22,9 @@
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
     "lazyloadPlaceholderEnable": false,
-    "useMultiFrameRuntime": false,
-    "useApiHook": false,
-    "useApiHostProcess": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -44,7 +44,7 @@
   "compileType": "miniprogram",
   "libVersion": "2.22.1",
   "appid": "wx783aaf977791fdaf",
-  "projectname": "FaceRecognition",
+  "projectname": "FaceApplet-Student",
   "debugOptions": {
     "hidedInDevtools": []
   },

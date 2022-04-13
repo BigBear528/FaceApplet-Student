@@ -1,1 +1,44 @@
 /* pages/mine/index.wxss */
+.logout {
+	background-color: red;
+	margin-top: 50rpx;
+}
+
+.card {
+	padding: 20rpx;
+	background-color: pink;
+	text-align: center;
+}
+
+.head-portrait {
+	height: 150rpx;
+}
+
+.image {
+	width: 150rpx;
+	height: 150rpx;
+	border-radius: 100rpx;
+}
+
+.head-info {
+	font-size: 20px;
+	margin-top: 20rpx;
+}
+
+.item {
+	display: flex;
+	justify-content: space-between;
+	padding: 10rpx;
+	background-color: #ddd;
+	margin-bottom: 4rpx;
+
+}
+
+.item .title {
+	font-size: 30rpx;
+}
+
+.item .icon {
+	width: 50rpx;
+	height: 50rpx;
+}

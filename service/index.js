@@ -1,4 +1,4 @@
-const BASE_URL = 'http://127.0.0.1:9000'
+const BASE_URL = 'http://192.168.31.183:9000'
 
 class DXRequest {
 	request(url, method, params) {
@@ -16,6 +16,8 @@ class DXRequest {
 				},
 				success: function (res) {
 					if (res.data.code === '401') {
+						wx.removeStorageSync('userInfo')
+
 						wx.reLaunch({
 							url: '/pages/login/index',
 						})

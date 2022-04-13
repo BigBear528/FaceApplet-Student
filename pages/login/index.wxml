@@ -1,27 +1,9 @@
-<van-tabs>
-  <van-tab title="学生登录">
-    <view class="top">
-      <input placeholder="学号" class="input" bindinput="sidInput"></input>
-      <input placeholder="密码" type="password" class="input" bindinput="spwdInput"></input>
-    </view>
+<view class="top">
+  <input placeholder="学号" class="input" bindinput="sidInput"></input>
+  <input placeholder="密码" type="password" class="input" bindinput="spwdInput"></input>
+</view>
 
-    <view class="bottom">
-      <button class="btn" bindtap="sLogin">登录</button>
-      <text class="tip">请使用学号和密码登录</text>
-    </view>
-  </van-tab>
-
-  <van-tab title="教师登录">
-
-    <view class="top">
-      <input placeholder="职工号" class="input" bindinput="tidInput"></input>
-      <input placeholder="密码" class="input" type="password" bindinput="tpwdInput"></input>
-    </view>
-
-
-    <view class="bottom">
-      <button class="btn" bindtap="tLogin">登录</button>
-      <text class="tip">请使用职工号和密码登录</text>
-    </view>
-  </van-tab>
-</van-tabs>
+<view class="bottom">
+  <button class="btn" bindtap="sLogin">登录</button>
+  <text class="tip">请使用学号和密码登录</text>
+</view>

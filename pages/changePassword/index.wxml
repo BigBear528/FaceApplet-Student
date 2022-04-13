@@ -1,0 +1,9 @@
+<view class="top">
+	<input placeholder="当前密码" type="password" class="input" model:value="{{currentPassword}}"></input>
+	<input placeholder=" 新密码" type="password" class="input" model:value="{{newPassword}}"></input>
+	<input placeholder="确认密码" type="password" class="input" model:value="{{confirmPassword}}"></input>
+</view>
+
+<view class="bottom">
+	<button class="btn" bindtap="changePassword">修改密码</button>
+</view>
