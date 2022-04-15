@@ -6,9 +6,16 @@ Page({
   },
 
   onLoad: function (options) {
-    let userInfo = JSON.parse(wx.getStorageSync('userInfo'))
+    this.init()
 
-    this.setData({ userInfo: userInfo })
+  },
+
+  init() {
+    // 从storage中获取userInfo
+    let userInfo = JSON.parse(wx.getStorageSync('userInfo'))
+    this.setData({
+      userInfo: userInfo
+    })
 
   },
 
@@ -22,6 +29,13 @@ Page({
   changePassword() {
     wx.navigateTo({
       url: '/pages/changePassword/index',
+    })
+  },
+
+  changeFaceImg() {
+    console.log(123)
+    wx.navigateTo({
+      url: '/pages/changeFaceImg/index',
     })
   }
 })

@@ -18,6 +18,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/changeFaceImg/index",
+          "query": "",
+          "scene": null,
+          "launchMode": "default"
         }
       ]
     }

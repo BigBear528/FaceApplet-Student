@@ -1,27 +1,28 @@
 {
-	"pages": [
-		"pages/login/index",
-		"pages/home/index",
-		"pages/mine/index",
-		"pages/changePassword/index"
-	],
-	"window": {
-		"backgroundTextStyle": "light",
-		"navigationBarBackgroundColor": "#fff",
-		"navigationBarTitleText": "Weixin",
-		"navigationBarTextStyle": "black"
-	},
-	"tabBar": {
-		"list": [
-			{
-				"pagePath": "pages/home/index",
-				"text": "主页"
-			},
-			{
-				"pagePath": "pages/mine/index",
-				"text": "我的"
-			}
-		]
-	},
-	"sitemapLocation": "sitemap.json"
+  "pages": [
+    "pages/login/index",
+    "pages/home/index",
+    "pages/mine/index",
+    "pages/changePassword/index",
+    "pages/changeFaceImg/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }

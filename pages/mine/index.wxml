@@ -1,7 +1,7 @@
 <!-- 个人信息卡片 -->
 <view class="card">
 	<view class="head-portrait">
-		<image class="image" src="https://img.yzcdn.cn/vant/cat.jpeg"></image>
+		<image class="image" src="{{userInfo.face}}"></image>
 	</view>
 
 	<view class="head-info">
@@ -20,7 +20,7 @@
 </view>
 
 
-<view class="item">
+<view class="item" bindtap="changeFaceImg">
 	<view class="title">
 		修改人脸
 	</view>

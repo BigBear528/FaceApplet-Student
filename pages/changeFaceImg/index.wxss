@@ -1,0 +1,15 @@
+.face {
+  text-align: center;
+}
+
+.image {
+  width: 300px;
+  height: 400px;
+
+  margin-top: 20px;
+}
+
+.btn {
+  margin-top: 20px;
+  background-color: skyblue;
+}
