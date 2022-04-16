@@ -4,7 +4,8 @@
     "pages/home/index",
     "pages/mine/index",
     "pages/changePassword/index",
-    "pages/changeFaceImg/index"
+    "pages/changeFaceImg/index",
+    "pages/Face/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,8 +14,7 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/home/index",
         "text": "主页"
       },

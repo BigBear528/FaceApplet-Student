@@ -21,7 +21,7 @@
         },
         {
           "name": "",
-          "pathName": "pages/changeFaceImg/index",
+          "pathName": "pages/Face/index",
           "query": "",
           "scene": null,
           "launchMode": "default"

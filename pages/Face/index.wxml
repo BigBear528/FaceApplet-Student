@@ -1,0 +1,5 @@
+<view class='camera'>
+  <image src="/images/border.png" mode="widthFix"></image>
+  <camera wx:if="{{isAuth}}" device-position="front" flash="off" binderror="error"></camera>
+</view>
+<button class="takePhoto" type="primary" bindtap="takePhoto">拍照</button>

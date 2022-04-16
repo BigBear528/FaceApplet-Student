@@ -37,6 +37,8 @@ Page({
   },
 
   sLogin() {
+    console.log(123)
+
     const params = {
       id: this.data.sid,
       password: this.data.spwd
@@ -53,7 +55,7 @@ Page({
         } else {
           wx.showToast({
             title: res.message, // 标题
-            icon: 'error',  // 图标类型，默认success
+            icon: 'error', // 图标类型，默认success
           })
         }
       })
