@@ -33,9 +33,13 @@ Page({
   },
 
   changeFaceImg() {
-    console.log(123)
+
+    // wx.navigateTo({
+    //   url: '/pages/changeFaceImg/index',
+    // })
+
     wx.navigateTo({
-      url: '/pages/changeFaceImg/index',
+      url: '/pages/FaceEntry/index',
     })
   }
 })

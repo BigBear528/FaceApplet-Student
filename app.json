@@ -5,7 +5,8 @@
     "pages/mine/index",
     "pages/changePassword/index",
     "pages/changeFaceImg/index",
-    "pages/Face/index"
+    "pages/FaceEntry/index",
+    "pages/FaceRecognition/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -14,7 +15,8 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/home/index",
         "text": "主页"
       },
@@ -24,5 +26,10 @@
       }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "展示给客户看的信息"
+    }
+  }
 }

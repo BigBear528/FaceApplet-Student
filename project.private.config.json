@@ -21,7 +21,14 @@
         },
         {
           "name": "",
-          "pathName": "pages/Face/index",
+          "pathName": "pages/FaceEntry/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/FaceRecognition/index",
           "query": "",
           "scene": null,
           "launchMode": "default"

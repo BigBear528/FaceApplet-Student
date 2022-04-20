@@ -1,2 +1,6 @@
-<!--pages/home/index.wxml-->
-<text>pages/home/index.wxml</text>
+<button bindtap="test">打卡1</button>
+<button bindtap="test2">打卡2</button>
+
+<button bindtap="btn">测距</button>
+
+<button bindtap="Face">人脸识别</button>
