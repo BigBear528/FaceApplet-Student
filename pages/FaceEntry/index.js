@@ -1,3 +1,5 @@
+import dxRequest from "../../service/index";
+
 const app = getApp()
 Page({
   data: {
@@ -102,10 +104,35 @@ Page({
           })
         }
         if (that.data.msg == 'SUCCESS') {
-          wx.showToast({
-            title: '人脸录入成功',
-            icon: 'success',
+          const userInfo = JSON.parse(wx.getStorageSync('userInfo'))
+          const params = {
+            id: userInfo.id,
+            status: 1
+          }
+          dxRequest.post('/student/faceUploadSuccess', params).then(res => {
+            if (res.code === '200') {
+              wx.reLaunch({
+                url: '/pages/home/index',
+              })
+
+              wx.showToast({
+                title: '人脸录入成功',
+                icon: 'success',
+              })
+            } else {
+              wx.showToast({
+                title: '人脸录入失败',
+                icon: "error"
+              })
+            }
+          }).catch(err => {
+            wx.showToast({
+              title: '人脸录入失败',
+              icon: "error"
+            })
           })
+
+
         }
       }
     })

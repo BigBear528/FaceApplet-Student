@@ -43,9 +43,12 @@ Page({
 
 
                 dxRequest.post('/student/faceUpload', params).
-                then(res => {
+                  then(res => {
                     if (res.code === '200') {
                       if (res.data) {
+                        this.data.userInfo.face = base64Img
+                        wx.setStorageSync('userInfo', JSON.stringify(this.data.userInfo))
+
                         wx.reLaunch({
                           url: '/pages/mine/index',
                         })

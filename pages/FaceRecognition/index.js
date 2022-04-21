@@ -31,7 +31,7 @@ Page({
     })
 
     wx.showToast({
-      title: '请重试',
+      title: '请稍等',
       icon: 'loading',
       duration: 500
     })
@@ -60,8 +60,13 @@ Page({
       }
     })
   },
+
   validPhoto() {
     var that = this;
+
+    const userInfo = JSON.parse(wx.getStorageSync('userInfo'))
+
+    // 单个人脸识别
     //上传人脸进行 比对
     wx.request({
       url: 'https://aip.baidubce.com/rest/2.0/face/v3/search?access_token=' + that.data.baidutoken,
@@ -70,6 +75,8 @@ Page({
         image: this.data.base64,
         image_type: 'BASE64',
         group_id_list: 'student', //自己建的用户组id
+        liveness_control: 'NORMAL',
+        user_id: userInfo.id
       },
       header: {
         'Content-Type': 'application/json' // 默认值
@@ -87,13 +94,21 @@ Page({
             icon: 'error',
           })
         }
+
+        if (that.data.msg == 'liveness check fail') {
+          wx.showToast({
+            title: '活体检测失败',
+            icon: 'error',
+          })
+        }
+
         if (that.data.msg == 'SUCCESS') {
-          if(res.data.result.user_list[0].score>80){
+          if (res.data.result.user_list[0].score > 80) {
             wx.showToast({
               title: '人脸识别成功',
               icon: 'success',
             })
-          }else{
+          } else {
             wx.showToast({
               title: '人脸识别失败',
               icon: 'error',

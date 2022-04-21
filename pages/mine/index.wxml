@@ -22,7 +22,7 @@
 
 <view class="item" bindtap="changeFaceImg">
 	<view class="title">
-		上传人脸
+		修改头像
 	</view>
 
 	<view class="icon">

@@ -1,5 +1,5 @@
 <view class="face">
   <image class="image" src="{{userInfo.face}}"></image>
 
-  <button class="btn" bindtap="changeFaceImg">修改人脸照片</button>
+  <button class="btn" bindtap="changeFaceImg">修改头像</button>
 </view>

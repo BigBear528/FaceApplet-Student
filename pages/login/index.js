@@ -37,8 +37,6 @@ Page({
   },
 
   sLogin() {
-    console.log(123)
-
     const params = {
       id: this.data.sid,
       password: this.data.spwd
@@ -46,12 +44,20 @@ Page({
 
     dxRequest.post('/student/login', params)
       .then(res => {
-        // console.log(res)
         if (res.code === '200') {
           wx.setStorageSync("userInfo", JSON.stringify(res.data))
-          wx.reLaunch({
-            url: '/pages/home/index',
-          })
+          if (res.data.img == 0) {
+            wx.navigateTo({
+              url: '/pages/FaceEntry/index',
+            })
+          }
+
+          if (res.data.img == 1) {
+            wx.reLaunch({
+              url: '/pages/home/index',
+            })
+          }
+
         } else {
           wx.showToast({
             title: res.message, // 标题

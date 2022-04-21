@@ -33,13 +33,12 @@ Page({
   },
 
   changeFaceImg() {
+    wx.navigateTo({
+      url: '/pages/changeFaceImg/index',
+    })
 
     // wx.navigateTo({
-    //   url: '/pages/changeFaceImg/index',
+    //   url: '/pages/FaceEntry/index',
     // })
-
-    wx.navigateTo({
-      url: '/pages/FaceEntry/index',
-    })
   }
 })
