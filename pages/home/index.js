@@ -8,7 +8,9 @@ Page({
     lat1: '',
     lng1: '',
     lat2: '',
-    lng2: ''
+    lng2: '',
+    show: false,
+    courseCode: ''
   },
 
   onLoad: function (options) {
@@ -71,66 +73,78 @@ Page({
     wx.navigateTo({
       url: '/pages/FaceRecognition/index',
     })
+  },
+
+  addCourse() {
+    this.setData({ courseCode: '' })
+    this.setData({ show: true })
+  },
+
+  onClose() {
+    this.setData({ show: false });
+  },
+
+  onConfirm() {
+    // console.log(this.data.courseCode)
+    if (this.data.courseCode == '') {
+      wx.showToast({
+        title: '请输入课程编号',
+        icon: 'error'
+      })
+    } else {
+      const userInfo = JSON.parse(wx.getStorageSync('userInfo'))
+
+      // 根据课程编号获取班级id
+      dxRequest.post('/class/getClassIdByCode', this.data.courseCode)
+        .then(res => {
+          if (res.code === '200') {
+            const params = {
+              cid: res.data,
+              sid: userInfo.id
+            }
+
+            // 根据班级id添加课程
+            dxRequest.post('/course/addCourse', params)
+              .then(res => {
+                if (res.code === '200') {
+                  if (res.data) {
+                    wx.showToast({
+                      title: "添加成功",
+                    })
+                  }
+
+                } else {
+                  wx.showToast({
+                    title: res.message,
+                    icon: 'error'
+                  })
+                }
+              }).catch(err => {
+                wx.showToast({
+                  title: "系统错误",
+                  icon: 'error'
+                })
+              })
+
+
+
+          } else {
+            wx.showToast({
+              title: res.message,
+              icon: 'error'
+            })
+          }
+        }).catch(err => {
+          wx.showToast({
+            title: "系统错误",
+            icon: 'error'
+          })
+        })
+    }
+
+
+
   }
-
-  // getDistance(lat1, lng1, lat2, lng2) {
-  //   lat1 = lat1 || 0;
-  //   lng1 = lng1 || 0;
-  //   lat2 = lat2 || 0;
-  //   lng2 = lng2 || 0;
-
-  //   var rad1 = lat1 * Math.PI / 180.0;
-  //   var rad2 = lat2 * Math.PI / 180.0;
-  //   var a = rad1 - rad2;
-  //   var b = lng1 * Math.PI / 180.0 - lng2 * Math.PI / 180.0;
-  //   var r = 6378137;
-  //   var distance = r * 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2) + Math.cos(rad1) * Math.cos(rad2) * Math.pow(Math.sin(b / 2), 2)));
-
-  //   return distance;
-  // }
-
-  // rad(d) {
-  //   return d * Math.PI / 180.0;
-  // },
-
-
-  // // 根据经纬度计算距离，参数分别为第一点的纬度，经度；第二点的纬度，经度
-  // getDistances(lat1, lng1, lat2, lng2) {
-
-  //   var radLat1 = this.rad(lat1);
-  //   var radLat2 = this.rad(lat2);
-  //   var a = radLat1 - radLat2;
-  //   var b = this.rad(lng1) - this.rad(lng2);
-  //   var s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2) +
-  //     Math.cos(radLat1) * Math.cos(radLat2) * Math.pow(Math.sin(b / 2), 2)));
-  //   s = s * 6378.137; // EARTH_RADIUS;
-  //   // 输出为公里
-  //   s = Math.round(s * 10000) / 10000;
-
-  //   var distance = s;
-  //   var distance_str = "";
-
-  //   if (parseInt(distance) >= 1) {
-  //     // distance_str = distance.toFixed(1) + "km";
-  //     distance_str = distance.toFixed(2) + "km";
-  //   } else {
-  //     // distance_str = distance * 1000 + "m";
-  //     distance_str = (distance * 1000).toFixed(2) + "m";
-  //   }
-
-  //   //s=s.toFixed(4);
-
-  //   // console.info('距离是', s);
-  //   // console.info('距离是', distance_str);
-  //   // return s;
-
-  //   //小小修改，这里返回对象
-  //   let objData = {
-  //     distance: distance,
-  //     distance_str: distance_str
-  //   }
-  //   return objData
-  // }
 
 
 })
