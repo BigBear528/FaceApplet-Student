@@ -7,6 +7,6 @@
 
 <button bindtap="addCourse">加入课程</button>
 
-<van-dialog use-slot title="加入课程" show="{{ show }}" showCancelButton showConfirmButton bind:close="onClose" bind:confirm="onConfirm">
+<van-dialog use-slot title="加入课程" show="{{ showDialog }}" showCancelButton showConfirmButton bind:close="onClose" bind:confirm="onConfirm">
 	<input placeholder="请输入课程编码" class="input" model:value="{{courseCode}}"></input>
 </van-dialog>

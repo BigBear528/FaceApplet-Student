@@ -2,7 +2,6 @@ import dxRequest from "../../service/index"
 
 // pages/login/index.js
 
-
 Page({
   data: {
     sid: "",
@@ -17,7 +16,6 @@ Page({
       token = JSON.parse(wx.getStorageSync('userInfo')).token;
     }
     if (token.length > 0) {
-
       wx.reLaunch({
         url: '/pages/home/index',
       })

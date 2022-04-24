@@ -15,14 +15,23 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
+    "custom": true,
+    "color": "#000",
+    "selectedColor": "#ff6861",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
     "list": [
       {
         "pagePath": "pages/home/index",
-        "text": "主页"
+        "text": "首页",
+        "iconPath": "./assets/images/tabbar/music_normal.png",
+        "selectedIconPath": "./assets/images/tabbar/music_active.png"
       },
       {
         "pagePath": "pages/mine/index",
-        "text": "我的"
+        "text": "我",
+        "iconPath": "./assets/images/tabbar/video_normal.png",
+        "selectedIconPath": "./assets/images/tabbar/video_active.png"
       }
     ]
   },

@@ -1,4 +1,6 @@
 // pages/mine/index.js
+
+var app = getApp()
 Page({
 
   data: {
@@ -21,6 +23,7 @@ Page({
 
   logout() {
     wx.removeStorageSync('userInfo')
+    app.globalData.selected = 0
     wx.reLaunch({
       url: '/pages/login/index',
     })

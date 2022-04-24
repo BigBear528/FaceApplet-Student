@@ -1,0 +1,18 @@
+<cover-view class="tab-bar" wx:if="{{selected!==1}}">
+
+	<cover-view class="tab-bar-border">
+	</cover-view>
+
+	<cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-box" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+
+		<cover-image class="cov_img" wx:if="{{index !== 1}}" src="{{selected === index ? item.selectedIconPath : item.iconPath}}">
+		</cover-image>
+
+		<cover-view wx:if="{{index !== 1}}" style="color: {{selected === index ?  selectedColor:color}}">{{item.text}}
+		</cover-view>
+
+		<cover-view wx:else="{{index === 1}}" class="center">+</cover-view>
+	</cover-view>
+
+
+</cover-view>
