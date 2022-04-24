@@ -9,7 +9,7 @@ Page({
     lng1: '',
     lat2: '',
     lng2: '',
-    show: false,
+
     courseCode: ''
   },
 
@@ -75,76 +75,6 @@ Page({
     })
   },
 
-  addCourse() {
-    this.setData({ courseCode: '' })
-    this.setData({ show: true })
-  },
-
-  onClose() {
-    this.setData({ show: false });
-  },
-
-  onConfirm() {
-    // console.log(this.data.courseCode)
-    if (this.data.courseCode == '') {
-      wx.showToast({
-        title: '请输入课程编号',
-        icon: 'error'
-      })
-    } else {
-      const userInfo = JSON.parse(wx.getStorageSync('userInfo'))
-
-      // 根据课程编号获取班级id
-      dxRequest.post('/class/getClassIdByCode', this.data.courseCode)
-        .then(res => {
-          if (res.code === '200') {
-            const params = {
-              cid: res.data,
-              sid: userInfo.id
-            }
-
-            // 根据班级id添加课程
-            dxRequest.post('/course/addCourse', params)
-              .then(res => {
-                if (res.code === '200') {
-                  if (res.data) {
-                    wx.showToast({
-                      title: "添加成功",
-                    })
-                  }
-
-                } else {
-                  wx.showToast({
-                    title: res.message,
-                    icon: 'error'
-                  })
-                }
-              }).catch(err => {
-                wx.showToast({
-                  title: "系统错误",
-                  icon: 'error'
-                })
-              })
-
-
-
-          } else {
-            wx.showToast({
-              title: res.message,
-              icon: 'error'
-            })
-          }
-        }).catch(err => {
-          wx.showToast({
-            title: "系统错误",
-            icon: 'error'
-          })
-        })
-    }
-
-
-
-  }
 
 
 })

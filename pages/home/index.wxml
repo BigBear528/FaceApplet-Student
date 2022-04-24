@@ -4,9 +4,3 @@
 <button bindtap="btn">测距</button>
 
 <button bindtap="Face">人脸识别</button>
-
-<button bindtap="addCourse">加入课程</button>
-
-<van-dialog use-slot title="加入课程" show="{{ showDialog }}" showCancelButton showConfirmButton bind:close="onClose" bind:confirm="onConfirm">
-	<input placeholder="请输入课程编码" class="input" model:value="{{courseCode}}"></input>
-</van-dialog>
