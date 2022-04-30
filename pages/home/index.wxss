@@ -2,3 +2,86 @@
 .input {
 	margin: 20px;
 }
+
+.flex {
+	display: flex;
+}
+
+
+.bottom {
+	/* margin: 320rpx 10rpx 10rpx 10rpx; */
+	margin: 10rpx;
+
+}
+
+.item {
+	display: flex;
+	justify-content: space-between;
+	padding: 10rpx;
+	background-color: #fff;
+	border-radius: 10px;
+	margin-bottom: 10rpx;
+
+}
+
+.item .left {
+	font-size: 30rpx;
+}
+
+.item .icon {
+	width: 80rpx;
+	height: 80rpx;
+	line-height: 100px;
+}
+
+
+.item .className {
+	font-size: 20px;
+	margin: 10px;
+}
+
+.item .classStatus {
+	margin: 5px 10px;
+	color: #409EFF;
+}
+
+.item .classType {
+	margin: 5px 10px;
+	color: #67C23A;
+}
+
+
+
+
+
+
+
+
+/* --------------------- */
+.log {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.selected {
+	font-size: 15px;
+	color: rgb(102, 165, 112);
+	width: 33%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* border-bottom: 5rpx solid rgb(102, 165, 112); */
+}
+
+.default {
+	font-size: 15px;
+	margin: 0 auto;
+	padding: 15px;
+}
+
+.content {
+	position: absolute;
+	width: 100%;
+}

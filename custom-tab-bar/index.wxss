@@ -29,12 +29,12 @@
 }
 
 .tab-bar-box .cov_img {
-  width: 27px;
-  height: 27px;
+  width: 20px;
+  height: 20px;
 }
 
 .tab-bar-box {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .center {

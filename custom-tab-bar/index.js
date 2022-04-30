@@ -8,9 +8,9 @@ Component({
 		selectedColor: "#1296db",
 		list: [{
 			pagePath: "/pages/home/index",
-			iconPath: "../assets/images/tabbar/music_normal.png",
+			iconPath: "../assets/images/tabbar/home_normal.png",
 			text: "首页",
-			selectedIconPath: "../assets/images/tabbar/music_active.png",
+			selectedIconPath: "../assets/images/tabbar/home_active.png",
 			id: 0
 		},
 		{
@@ -20,9 +20,9 @@ Component({
 		},
 		{
 			pagePath: "/pages/mine/index",
-			iconPath: "../assets/images/tabbar/video_normal.png",
+			iconPath: "../assets/images/tabbar/mine_normal.png",
 			text: "我的",
-			selectedIconPath: "../assets/images/tabbar/video_active.png",
+			selectedIconPath: "../assets/images/tabbar/mine_active.png",
 			id: 2
 		}
 		]
@@ -42,7 +42,7 @@ Component({
 				// 	url: '/pages/FaceEntry/index'
 				// })
 				wx.showModal({
-					title: '提示',
+					title: '添加课程',
 					// content: '这是一个模态弹窗',
 					editable: true,
 					placeholderText: "请输入课程编号",

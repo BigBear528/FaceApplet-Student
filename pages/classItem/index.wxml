@@ -1,0 +1,35 @@
+<view class="top">
+
+	<view class="item">
+		<view class="left">
+			<view class="title">
+				<view class="className">{{item.className}}</view>
+				<view class="classCode">{{item.code}}</view>
+			</view>
+
+
+			<view class="time">{{startTime}} - {{endTime}}</view>
+
+			<view class="time">{{item.location}}</view>
+
+			<view class="flex">
+				<view class="classStatus">{{ item.teacherName}}</view>
+				<view class="classType">{{item.type == 0 ? "线下课堂": item.type == 1 ? "线上课堂" : "课外团体实践活动"}}</view>
+			</view>
+		</view>
+
+	</view>
+</view>
+
+<view class="bottom" wx:if="{{isRange}}">
+	<button class="btn" bindtap="clock">立即打卡</button>
+	<view class="tip">已进入打卡区域</view>
+</view>
+
+<view class="bottom" wx:else>
+	<button class="btn_error" bindtap="clock">立即打卡</button>
+	<view class="tip_error">请先进入打卡区域</view>
+</view>
+
+
+<button class="btn1" bindtap="leave">立即请假</button>

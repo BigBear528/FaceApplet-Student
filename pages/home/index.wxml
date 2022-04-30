@@ -1,6 +1,125 @@
-<button bindtap="test">打卡1</button>
+<!-- <button bindtap="test">打卡1</button>
 <button bindtap="test2">打卡2</button>
 
 <button bindtap="btn">测距</button>
 
-<button bindtap="Face">人脸识别</button>
+<button bindtap="Face">人脸识别</button> -->
+
+<!-- <view class="bottom">
+
+	<view class="item" wx:for="{{attendanceList}}" wx:key="aid" bindtap="itemClick" data-item="{{item}}">
+
+		<view class="left">
+			<view class="className">{{item.className}}</view>
+
+			<view class="flex">
+				<view class="classStatus">{{item.teacherName}}</view>
+				<view class="classType">{{item.type == 0 ? "线下课堂": item.type == 1 ? "线上课堂" : "课外团体实践活动"}}</view>
+			</view>
+
+		</view>
+
+
+		<view class="icon">
+			<image class="icon" src="/assets/images/icons/arrow-right.png"></image>
+		</view>
+
+	</view>
+</view> -->
+
+
+<view class='content'>
+	<view class='log'>
+		<view class="{{currentTab==0?'selected':'default'}}" data-current="0" bindtap='switchNav'>
+			进行中
+		</view>
+		<view class="{{currentTab==1?'selected':'default'}}" data-current="1" bindtap='switchNav'>
+			已完成
+		</view>
+		<view class="{{currentTab==2?'selected':'default'}}" data-current="2" bindtap='switchNav'>
+			已过期
+		</view>
+	</view>
+
+
+	<swiper current='{{currentTab}}' style='height:{{winHeight}}px' bindchange='bindChange'>
+
+		<!-- 进行中 -->
+		<swiper-item>
+			<view class="bottom">
+
+				<view class="item" wx:for="{{currentList}}" wx:key="aid" bindtap="itemClick" data-item="{{item}}">
+
+					<view class="left">
+						<view class="className">{{item.className}}</view>
+
+						<view class="flex">
+							<view class="classStatus">{{item.teacherName}}</view>
+							<view class="classType">{{item.type == 0 ? "线下课堂": item.type == 1 ? "线上课堂" : "课外团体实践活动"}}</view>
+						</view>
+
+					</view>
+
+
+					<view class="icon">
+						<image class="icon" src="/assets/images/icons/arrow-right.png"></image>
+					</view>
+
+				</view>
+			</view>
+		</swiper-item>
+
+		<!-- 已完成 -->
+
+		<swiper-item>
+			<view>
+				<view class="bottom">
+
+					<view class="item" wx:for="{{completedList}}" wx:key="aid" bindtap="itemClick" data-item="{{item}}">
+
+						<view class="left">
+							<view class="className">{{item.className}}</view>
+
+							<view class="flex">
+								<view class="classStatus">{{item.teacherName}}</view>
+								<view class="classType">{{item.type == 0 ? "线下课堂": item.type == 1 ? "线上课堂" : "课外团体实践活动"}}</view>
+							</view>
+
+						</view>
+
+
+						<view class="icon">
+							<image class="icon" src="/assets/images/icons/arrow-right.png"></image>
+						</view>
+
+					</view>
+				</view>
+			</view>
+		</swiper-item>
+
+		<!-- 已过期 -->
+		<swiper-item>
+			<view class="bottom">
+
+				<view class="item" wx:for="{{expiredList}}" wx:key="aid" bindtap="itemClick" data-item="{{item}}">
+
+					<view class="left">
+						<view class="className">{{item.className}}</view>
+
+						<view class="flex">
+							<view class="classStatus">{{item.teacherName}}</view>
+							<view class="classType">{{item.type == 0 ? "线下课堂": item.type == 1 ? "线上课堂" : "课外团体实践活动"}}</view>
+						</view>
+
+					</view>
+
+
+					<view class="icon">
+						<image class="icon" src="/assets/images/icons/arrow-right.png"></image>
+					</view>
+
+				</view>
+			</view>
+		</swiper-item>
+	</swiper>
+</view>

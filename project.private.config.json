@@ -1,39 +1,31 @@
 {
-  "setting": {},
-  "condition": {
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "name": "",
-          "pathName": "pages/mine/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/FaceEntry/index",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/FaceRecognition/index",
-          "query": "",
-          "scene": null,
-          "launchMode": "default"
-        }
-      ]
-    }
-  }
+	"setting": {},
+	"condition": {
+		"miniprogram": {
+			"list": [
+				{
+					"name": "",
+					"pathName": "pages/mine/index",
+					"query": "",
+					"launchMode": "default",
+					"scene": null
+				},
+				{
+					"name": "",
+					"pathName": "pages/FaceEntry/index",
+					"query": "",
+					"launchMode": "default",
+					"scene": null
+				},
+				{
+					"name": "",
+					"pathName": "pages/classItem/index",
+					"query": "item=%7B%22aid%22%3A18%2C%22className%22%3A%22%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%22%2C%22code%22%3A%221650977275%22%2C%22teacherName%22%3A%22%E8%B0%A2%E8%8E%89%22%2C%22type%22%3A0%2C%22startTime%22%3A1650979380%2C%22endTime%22%3A1650982980%2C%22lat%22%3A30.782039%2C%22lon%22%3A103.952988%2C%22location%22%3A%22%E5%9B%9B%E5%B7%9D%E7%9C%81%E6%88%90%E9%83%BD%E5%B8%82%E9%87%91%E7%89%9B%E5%8C%BA%E5%B9%BF%E5%9C%BA%E8%B7%AF%E5%8C%97%E4%B8%80%E6%AE%B5%22%7D",
+					"launchMode": "default",
+					"scene": null
+				}
+			]
+		}
+	},
+	"description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
 }
