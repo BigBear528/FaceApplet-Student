@@ -1,0 +1,104 @@
+/* pages/classItem/index.wxss */
+.flex {
+	display: flex;
+}
+
+.title {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.time {
+	margin: 10px;
+}
+
+.top {
+	margin: 20rpx 10rpx 40rpx 10rpx;
+
+}
+
+.item {
+	padding: 20rpx 10rpx;
+	background-color: #fff;
+	border-radius: 10px;
+	margin-bottom: 10rpx;
+
+}
+
+.item .left {
+	font-size: 30rpx;
+}
+
+
+.item .className {
+	font-size: 20px;
+	margin: 10px;
+}
+
+.item .classCode {
+	font-size: 20px;
+	margin: 10px;
+	color: #606266;
+}
+
+.item .classStatus {
+	margin: 5px 10px;
+	color: #409EFF;
+}
+
+.item .classType {
+	margin: 5px 10px;
+	color: #67C23A;
+}
+
+
+.bottom .btn {
+	background-color: #409EFF;
+	color: #fff;
+	margin-bottom: 10px;
+	margin-top: 150rpx;
+
+	width: 300rpx;
+	height: 300rpx;
+
+	border-radius: 150rpx;
+	line-height: 300rpx;
+
+}
+
+
+
+.bottom .tip {
+	width: 180rpx;
+	margin: 0 auto;
+	color: #67C23A;
+}
+
+.bottom .btn_error {
+	background-color: #ccc;
+	color: #fff;
+	margin-bottom: 10px;
+	margin-top: 150rpx;
+
+	width: 300rpx;
+	height: 300rpx;
+
+	border-radius: 150rpx;
+	line-height: 300rpx;
+}
+
+.bottom .tip_error {
+	width: 390rpx;
+	margin: 0 auto;
+	color: red;
+}
+
+.btn1 {
+	position: fixed;
+	/* margin: 50px 0; */
+	width: 100%;
+	bottom: 0;
+	background-color: #409EFF;
+	border-radius: 0;
+}

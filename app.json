@@ -7,7 +7,11 @@
 		"pages/changeFaceImg/index",
 		"pages/FaceEntry/index",
 		"pages/FaceRecognition/index",
-		"pages/classItem/index"
+		"pages/classItem/index",
+		"pages/classItemSuccess/index",
+		"pages/classItemFail/index",
+		"pages/message/index",
+		"pages/course/index"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

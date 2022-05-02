@@ -9,6 +9,26 @@
 	</view>
 </view>
 
+<view class="item" bindtap="message">
+	<view class="title">
+		消息通知
+	</view>
+
+	<view class="icon">
+		<image class="icon" src="/assets/images/icons/arrow-right.png"></image>
+	</view>
+</view>
+
+<view class="item" bindtap="course">
+	<view class="title">
+		所有课程
+	</view>
+
+	<view class="icon">
+		<image class="icon" src="/assets/images/icons/arrow-right.png"></image>
+	</view>
+</view>
+
 <view class="item" bindtap="changePassword">
 	<view class="title">
 		修改密码
@@ -29,6 +49,8 @@
 		<image class="icon" src="/assets/images/icons/arrow-right.png"></image>
 	</view>
 </view>
+
+
 
 
 <!-- 退出登录 -->

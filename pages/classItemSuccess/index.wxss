@@ -70,7 +70,7 @@
 
 
 .bottom .tip {
-	width: 230rpx;
+	width: 180rpx;
 	margin: 0 auto;
 	color: #67C23A;
 }
@@ -92,4 +92,13 @@
 	width: 260rpx;
 	margin: 0 auto;
 	color: red;
+}
+
+.btn1 {
+	position: fixed;
+	/* margin: 50px 0; */
+	width: 100%;
+	bottom: 0;
+	background-color: #409EFF;
+	border-radius: 0;
 }

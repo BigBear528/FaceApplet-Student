@@ -10,7 +10,7 @@
 
 			<view class="time">{{startTime}} - {{endTime}}</view>
 
-			<view class="time" wx:if="{{item.type == 0}}">{{item.location}}</view>
+			<view class="time">{{item.location}}</view>
 
 			<view class="flex">
 				<view class="classStatus">{{ item.teacherName}}</view>
@@ -21,7 +21,13 @@
 	</view>
 </view>
 
-<view class="bottom" wx:if="{{isRange}}">
+
+<view class="bottom">
+	<button class="btn_error" >已过期</button>
+	<view class="tip_error">请在规定的打卡时间内打卡</view>
+</view>
+
+<!-- <view class="bottom" wx:if="{{isRange}}">
 	<button class="btn" bindtap="clock">立即打卡</button>
 	<view class="tip">已进入打卡区域</view>
 </view>
@@ -29,7 +35,7 @@
 <view class="bottom" wx:else>
 	<button class="btn_error" bindtap="clock">立即打卡</button>
 	<view class="tip_error">请先进入打卡区域</view>
-</view>
+</view> -->
 
 
-<button class="btn1" bindtap="leave">请假</button>
+<!-- <button class="btn1" bindtap="leave">立即请假</button> -->

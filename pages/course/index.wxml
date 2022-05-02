@@ -1,0 +1,16 @@
+<view class="bottom">
+
+	<view class="item" wx:for="{{courseList}}" wx:key="cid">
+
+		<view class="left">
+			<view class="className">{{item.cname}}</view>
+
+			<view class="flex">
+				<view class="classStatus">{{item.tname}}</view>
+				<view class="classType">{{item.type == 0 ? "线下课堂": item.type == 1 ? "线上课堂" : "课外团体实践活动"}}</view>
+				<view class="classEnd">{{item.end == 0 ? "进行中": "已结束"}}</view>
+			</view>
+
+		</view>
+	</view>
+</view>

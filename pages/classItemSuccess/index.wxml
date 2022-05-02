@@ -21,7 +21,13 @@
 	</view>
 </view>
 
-<view class="bottom" wx:if="{{isRange}}">
+
+<view class="bottom">
+	<button class="btn">打卡成功</button>
+	<view class="tip">已完成打卡</view>
+</view>
+
+<!-- <view class="bottom" wx:if="{{isRange}}">
 	<button class="btn" bindtap="clock">立即打卡</button>
 	<view class="tip">已进入打卡区域</view>
 </view>
@@ -29,4 +35,7 @@
 <view class="bottom" wx:else>
 	<button class="btn_error" bindtap="clock">立即打卡</button>
 	<view class="tip_error">请先进入打卡区域</view>
-</view>
+</view> -->
+
+
+<!-- <button class="btn1" bindtap="leave">立即请假</button> -->

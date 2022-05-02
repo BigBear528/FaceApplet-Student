@@ -7,9 +7,9 @@ Page({
 		item: {},
 		startTime: '',
 		endTime: '',
-		isRange: false,
 		lat1: '',
 		lon1: '',
+		isRange: false
 	},
 
 	onLoad: function (options) {
@@ -77,20 +77,26 @@ Page({
 	},
 
 	getLocation() {
-		wx.getLocation({
-			type: 'gcj02',
-			isHighAccuracy: true,
-			success: (res) => {
-				this.setData({
-					lat1: res.latitude
-				})
-				this.setData({
-					lon1: res.longitude
-				})
+		if (this.data.item.type == 0) {
+			wx.getLocation({
+				type: 'gcj02',
+				isHighAccuracy: true,
+				success: (res) => {
+					this.setData({
+						lat1: res.latitude
+					})
+					this.setData({
+						lon1: res.longitude
+					})
 
-				this.distance()
-			}
-		})
+					this.distance()
+				}
+			})
+		} else {
+			this.setData({ isRange: true })
+		}
+
+
 	},
 
 

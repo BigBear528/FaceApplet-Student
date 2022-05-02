@@ -75,7 +75,7 @@
 			<view>
 				<view class="bottom">
 
-					<view class="item" wx:for="{{completedList}}" wx:key="aid" bindtap="itemClick" data-item="{{item}}">
+					<view class="item" wx:for="{{completedList}}" wx:key="aid" bindtap="itemClickSuccess" data-item="{{item}}">
 
 						<view class="left">
 							<view class="className">{{item.className}}</view>
@@ -101,7 +101,7 @@
 		<swiper-item>
 			<view class="bottom">
 
-				<view class="item" wx:for="{{expiredList}}" wx:key="aid" bindtap="itemClick" data-item="{{item}}">
+				<view class="item" wx:for="{{expiredList}}" wx:key="aid" bindtap="itemClickFail" data-item="{{item}}">
 
 					<view class="left">
 						<view class="className">{{item.className}}</view>

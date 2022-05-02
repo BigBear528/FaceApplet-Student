@@ -171,7 +171,20 @@ Page({
 		wx.navigateTo({
 			url: `/pages/classItem/index?item=${JSON.stringify(item)}`
 		})
+	},
 
+	itemClickSuccess(event) {
+		const item = event.currentTarget.dataset.item
+		wx.navigateTo({
+			url: `/pages/classItemSuccess/index?item=${JSON.stringify(item)}`
+		})
+	},
+
+	itemClickFail(event) {
+		const item = event.currentTarget.dataset.item
+		wx.navigateTo({
+			url: `/pages/classItemFail/index?item=${JSON.stringify(item)}`
+		})
 	},
 
 	switchNav: function (e) {

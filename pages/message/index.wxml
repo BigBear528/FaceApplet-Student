@@ -1,0 +1,22 @@
+<view class="item" wx:for="{{messageList}}" wx:key="index">
+	<view class="flex">
+		<view>课程名称:</view>
+		<view>{{item.name}}</view>
+	</view>
+
+	<view class="flex">
+		<view>审批结果:</view>
+		<view class="success" wx:if="{{item.status == 3 }}">通过</view>
+		<view class="fail" wx:else="">驳回</view>
+	</view>
+
+	<view class="flex">
+		<view>审批意见:</view>
+		<view>{{item.reason}}</view>
+	</view>
+
+	<view class="flex">
+		<view>审批时间:</view>
+		<view>{{item.time}}</view>
+	</view>
+</view>
