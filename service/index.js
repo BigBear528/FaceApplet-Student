@@ -1,5 +1,6 @@
 // const BASE_URL = 'http://192.168.31.247:9000'
-const BASE_URL = 'http://192.168.31.183:9000'
+// const BASE_URL = 'http://192.168.31.183:9000'
+const BASE_URL = 'http://47.109.34.96:9000'
 
 
 class DXRequest {
@@ -25,8 +26,8 @@ class DXRequest {
 						})
 						wx.showToast({
 							title: '请重新登录', // 标题
-							icon: 'error',  // 图标类型，默认success
-							duration: 1500  // 提示窗停留时间，默认1500ms
+							icon: 'error', // 图标类型，默认success
+							duration: 1500 // 提示窗停留时间，默认1500ms
 						})
 					} else {
 						resolve(res.data)
