@@ -1,6 +1,8 @@
 <view class="camera-box">
-  <camera device-position="front" flash="off" binderror="error" class="camera"></camera>
-  <view class="face-box">
-    <button class="face" type="primary" bindtap="takePhoto"> 人脸识别 </button>
-  </view>
+	<camera device-position="front" flash="off" binderror="error" class="camera">
+	</camera>
+	<canvas style="width: 100%;height:{{windowWidth}}px;position:absolute;" canvas-id="canvas"></canvas>
+	<view class="face-box">
+		<button class="face" type="primary" bindtap="takePhoto"> 人脸识别 </button>
+	</view>
 </view>

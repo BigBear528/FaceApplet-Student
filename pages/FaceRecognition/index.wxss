@@ -23,5 +23,7 @@
 	width: 100%;
 }
 
-
-
+.frame {
+	position: relative;
+	border: 1px solid black;
+}
